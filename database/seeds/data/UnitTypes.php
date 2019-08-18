@@ -1103,7 +1103,7 @@ class UnitTypes
             'cost' => 400,
             'technology_id' => 122,
             'strength' => 32,
-            'bombard_strmdength' => 20,
+            'bombard_strength' => 20,
             'range' => 8,
             'moves' => 1,
         ],

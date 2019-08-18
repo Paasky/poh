@@ -291,5 +291,9 @@ class Resources
             'type' => 'generated',
             'technology_id' => Plastics,
         ],
+        // jade
+        // ivory
+        // seal
+        // fur
     ];
 }

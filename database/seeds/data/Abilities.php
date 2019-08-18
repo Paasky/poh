@@ -214,7 +214,7 @@ class Abilities
         ],
         [
             'model_type' => UnitType::class,
-        'model_id' => 38    ,
+            'model_id' => 38,
             'ability' => Ability::ABILITY_STRENGTH,
             'effect' => 10,
             'is_percent' => true,

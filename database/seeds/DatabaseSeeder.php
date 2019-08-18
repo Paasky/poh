@@ -1,12 +1,14 @@
 <?php
 
 use App\Models\CommonModel;
+use database\seeds\data\Abilities;
 use database\seeds\data\Biomes;
 use database\seeds\data\CityTypes;
 use database\seeds\data\Features;
 use database\seeds\data\Landscapes;
 use database\seeds\data\Resources;
 use database\seeds\data\Technologies;
+use database\seeds\data\TechRequirements;
 use database\seeds\data\Terrains;
 use database\seeds\data\UnitTypes;
 use Illuminate\Database\Seeder;
@@ -21,7 +23,7 @@ class DatabaseSeeder extends Seeder
         $this->seedDataset(Features::MODEL, Features::DATA);
         $this->seedDataset(CityTypes::MODEL, CityTypes::DATA);
         $this->seedDataset(Technologies::MODEL, Technologies::DATA);
-        // todo tech requirements
+        $this->seedDataset(TechRequirements::MODEL, TechRequirements::DATA);
         $this->seedDataset(Resources::MODEL, Resources::DATA);
         // todo building types
         // todo district types
@@ -30,7 +32,7 @@ class DatabaseSeeder extends Seeder
         $this->seedDataset(UnitTypes::MODEL, UnitTypes::DATA);
         // todo unit upgrades types
         // todo unit promotion types
-        // todo abilities types
+        $this->seedDataset(Abilities::MODEL, Abilities::DATA);
         // todo civilizations
 
     }
