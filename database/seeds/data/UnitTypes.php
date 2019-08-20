@@ -2,6 +2,7 @@
 
 namespace database\seeds\data;
 
+use App\Models\PohModel;
 use App\Models\Types\UnitType;
 
 class UnitTypes
@@ -9,7 +10,7 @@ class UnitTypes
     const MODEL = UnitType::class;
     const DATA = [
         [
-            'id' => 1,
+            'model' => PohModel::UNIT_WORKER,
             'title' => 'Worker',
             'class' => UnitType::CLASS_WORKER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -20,7 +21,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 2,
+            'model' => PohModel::UNIT_BUILDER,
             'title' => 'Builder',
             'class' => UnitType::CLASS_WORKER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -32,7 +33,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 3,
+            'model' => PohModel::UNIT_PEASANT,
             'title' => 'Peasant',
             'class' => UnitType::CLASS_WORKER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -44,7 +45,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 4,
+            'model' => PohModel::UNIT_ENGINEER,
             'title' => 'Engineer',
             'class' => UnitType::CLASS_WORKER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -56,7 +57,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 5,
+            'model' => PohModel::UNIT_TRACTOR,
             'title' => 'Tractor',
             'class' => UnitType::CLASS_WORKER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -68,7 +69,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 6,
+            'model' => PohModel::UNIT_ROBOTICS_ENGINEER,
             'title' => 'Robotics Engineer',
             'class' => UnitType::CLASS_WORKER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -80,7 +81,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 7,
+            'model' => PohModel::UNIT_TRIBE,
             'title' => 'Tribe',
             'class' => UnitType::CLASS_SETTLER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -91,7 +92,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 8,
+            'model' => PohModel::UNIT_SETTLER,
             'title' => 'Settler',
             'class' => UnitType::CLASS_SETTLER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -103,7 +104,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 9,
+            'model' => PohModel::UNIT_COLONIST,
             'title' => 'Colonist',
             'class' => UnitType::CLASS_SETTLER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -115,7 +116,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 10,
+            'model' => PohModel::UNIT_MIGRANT,
             'title' => 'Migrant',
             'class' => UnitType::CLASS_SETTLER,
             'type' => UnitType::TYPE_CIVILIAN,
@@ -127,7 +128,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 11,
+            'model' => PohModel::UNIT_SCOUT,
             'title' => 'Scout',
             'class' => UnitType::CLASS_SCOUT,
             'type' => UnitType::TYPE_SUPPORT,
@@ -138,7 +139,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 12,
+            'model' => PohModel::UNIT_JAVELINMAN,
             'title' => 'Javelinman',
             'class' => UnitType::CLASS_SCOUT,
             'type' => UnitType::TYPE_SUPPORT,
@@ -152,7 +153,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 13,
+            'model' => PohModel::UNIT_HORSE_ARCHER,
             'title' => 'Horse Archer',
             'class' => UnitType::CLASS_SCOUT,
             'type' => UnitType::TYPE_SUPPORT,
@@ -166,7 +167,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 14,
+            'model' => PohModel::UNIT_CROSSBOWMAN,
             'title' => 'Crossbowman',
             'class' => UnitType::CLASS_RANGED,
             'type' => UnitType::TYPE_SUPPORT,
@@ -180,7 +181,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 15,
+            'model' => PohModel::UNIT_HARQUEBUSIER,
             'title' => 'Harquebusier',
             'class' => UnitType::CLASS_SCOUT,
             'type' => UnitType::TYPE_SUPPORT,
@@ -194,7 +195,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 16,
+            'model' => PohModel::UNIT_LIGHT_INFANTRY,
             'title' => 'Light Infantry',
             'class' => UnitType::CLASS_SCOUT,
             'type' => UnitType::TYPE_SUPPORT,
@@ -208,7 +209,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 17,
+            'model' => PohModel::UNIT_ARMORED_CAR,
             'title' => 'Armored Car',
             'class' => UnitType::CLASS_ARMORED,
             'type' => UnitType::TYPE_SUPPORT,
@@ -222,7 +223,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 18,
+            'model' => PohModel::UNIT_LIGHT_TANK,
             'title' => 'Light Tank',
             'class' => UnitType::CLASS_ARMORED,
             'type' => UnitType::TYPE_SUPPORT,
@@ -236,7 +237,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 19,
+            'model' => PohModel::UNIT_WARRIOR,
             'title' => 'Warrior',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -247,7 +248,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 20,
+            'model' => PohModel::UNIT_AXEMAN,
             'title' => 'Axeman',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -259,7 +260,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 21,
+            'model' => PohModel::UNIT_SWORDMAN,
             'title' => 'Swordman',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -271,7 +272,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 22,
+            'model' => PohModel::UNIT_HEAVY_SWORDMAN,
             'title' => 'Heavy Swordman',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -283,7 +284,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 23,
+            'model' => PohModel::UNIT_MACEMAN,
             'title' => 'Maceman',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -295,7 +296,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 24,
+            'model' => PohModel::UNIT_LONGSWORDMAN,
             'title' => 'Longswordman',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -307,7 +308,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 25,
+            'model' => PohModel::UNIT_MAN_AT_ARMS,
             'title' => 'Man-at-Arms',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -319,7 +320,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 26,
+            'model' => PohModel::UNIT_ARQUEBUISIER,
             'title' => 'Arquebuisier',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -331,7 +332,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 27,
+            'model' => PohModel::UNIT_MUSKETMAN,
             'title' => 'Musketman',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -343,7 +344,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 28,
+            'model' => PohModel::UNIT_RIFLEMAN,
             'title' => 'Rifleman',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -355,7 +356,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 29,
+            'model' => PohModel::UNIT_INFANTRY,
             'title' => 'Infantry',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -367,7 +368,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 30,
+            'model' => PohModel::UNIT_MODERN_INFANTRY,
             'title' => 'Modern Infantry',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -379,7 +380,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 31,
+            'model' => PohModel::UNIT_MOBILE_INFANTRY,
             'title' => 'Mobile Infantry',
             'class' => UnitType::CLASS_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -391,7 +392,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 32,
+            'model' => PohModel::UNIT_SPEARMAN,
             'title' => 'Spearman',
             'class' => UnitType::CLASS_HEAVY_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -403,7 +404,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 33,
+            'model' => PohModel::UNIT_PHALANX,
             'title' => 'Phalanx',
             'class' => UnitType::CLASS_HEAVY_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -415,7 +416,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 34,
+            'model' => PohModel::UNIT_PIKEMAN,
             'title' => 'Pikeman',
             'class' => UnitType::CLASS_HEAVY_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -427,7 +428,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 35,
+            'model' => PohModel::UNIT_HALBERDIER,
             'title' => 'Halberdier',
             'class' => UnitType::CLASS_HEAVY_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -439,7 +440,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 36,
+            'model' => PohModel::UNIT_GRENADIER,
             'title' => 'Grenadier',
             'class' => UnitType::CLASS_HEAVY_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -451,7 +452,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 37,
+            'model' => PohModel::UNIT_ASSAULT_TROOP,
             'title' => 'Assault Troop',
             'class' => UnitType::CLASS_HEAVY_INFANTRY,
             'type' => UnitType::TYPE_REGULAR,
@@ -463,7 +464,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 38,
+            'model' => PohModel::UNIT_MECHANIZED_INFANTRY,
             'title' => 'Mechanized Infantry',
             'class' => UnitType::CLASS_ARMORED,
             'type' => UnitType::TYPE_REGULAR,
@@ -475,7 +476,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 39,
+            'model' => PohModel::UNIT_SLINGER,
             'title' => 'Slinger',
             'class' => UnitType::CLASS_RANGED,
             'type' => UnitType::TYPE_SUPPORT,
@@ -488,7 +489,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 40,
+            'model' => PohModel::UNIT_BOWMAN,
             'title' => 'Bowman',
             'class' => UnitType::CLASS_RANGED,
             'type' => UnitType::TYPE_SUPPORT,
@@ -502,7 +503,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 41,
+            'model' => PohModel::UNIT_ARCHER,
             'title' => 'Archer',
             'class' => UnitType::CLASS_RANGED,
             'type' => UnitType::TYPE_SUPPORT,
@@ -516,7 +517,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 42,
+            'model' => PohModel::UNIT_LONGBOWMAN,
             'title' => 'Longbowman',
             'class' => UnitType::CLASS_SCOUT,
             'type' => UnitType::TYPE_SUPPORT,
@@ -530,7 +531,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 43,
+            'model' => PohModel::UNIT_CHARIOT,
             'title' => 'Chariot',
             'class' => UnitType::CLASS_MOUNTED,
             'type' => UnitType::TYPE_REGULAR,
@@ -542,7 +543,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 44,
+            'model' => PohModel::UNIT_HORSEMAN,
             'title' => 'Horseman',
             'class' => UnitType::CLASS_MOUNTED,
             'type' => UnitType::TYPE_REGULAR,
@@ -554,7 +555,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 45,
+            'model' => PohModel::UNIT_CATAPHRACT,
             'title' => 'Cataphract',
             'class' => UnitType::CLASS_MOUNTED,
             'type' => UnitType::TYPE_REGULAR,
@@ -566,7 +567,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 46,
+            'model' => PohModel::UNIT_KNIGHT,
             'title' => 'Knight',
             'class' => UnitType::CLASS_MOUNTED,
             'type' => UnitType::TYPE_REGULAR,
@@ -578,7 +579,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 47,
+            'model' => PohModel::UNIT_LANCER,
             'title' => 'Lancer',
             'class' => UnitType::CLASS_MOUNTED,
             'type' => UnitType::TYPE_REGULAR,
@@ -590,7 +591,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 48,
+            'model' => PohModel::UNIT_CAVALRY,
             'title' => 'Cavalry',
             'class' => UnitType::CLASS_MOUNTED,
             'type' => UnitType::TYPE_REGULAR,
@@ -602,7 +603,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 49,
+            'model' => PohModel::UNIT_LANDSHIP,
             'title' => 'Landship',
             'class' => UnitType::CLASS_ARMORED,
             'type' => UnitType::TYPE_REGULAR,
@@ -614,7 +615,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 50,
+            'model' => PohModel::UNIT_TANK,
             'title' => 'Tank',
             'class' => UnitType::CLASS_ARMORED,
             'type' => UnitType::TYPE_REGULAR,
@@ -626,7 +627,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 51,
+            'model' => PohModel::UNIT_MODERN_TANK,
             'title' => 'Modern Tank',
             'class' => UnitType::CLASS_ARMORED,
             'type' => UnitType::TYPE_REGULAR,
@@ -638,7 +639,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 52,
+            'model' => PohModel::UNIT_MAIN_BATTLE_TANK,
             'title' => 'Main Battle Tank',
             'class' => UnitType::CLASS_ARMORED,
             'type' => UnitType::TYPE_REGULAR,
@@ -650,7 +651,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 53,
+            'model' => PohModel::UNIT_BATTERING_RAM,
             'title' => 'Battering Ram',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -662,7 +663,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 54,
+            'model' => PohModel::UNIT_CATAPULT,
             'title' => 'Catapult',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -676,7 +677,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 55,
+            'model' => PohModel::UNIT_TREBUCHET,
             'title' => 'Trebuchet',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -690,7 +691,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 56,
+            'model' => PohModel::UNIT_MORTAR,
             'title' => 'Mortar',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -704,7 +705,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 57,
+            'model' => PohModel::UNIT_CANNON,
             'title' => 'Cannon',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -718,7 +719,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 58,
+            'model' => PohModel::UNIT_ARTILLERY,
             'title' => 'Artillery',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -732,7 +733,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 59,
+            'model' => PohModel::UNIT_FIELD_ARTILLERY,
             'title' => 'Field Artillery',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -746,7 +747,7 @@ class UnitTypes
             'moves' => 2,
         ],
         [
-            'id' => 60,
+            'model' => PohModel::UNIT_ROCKET_ARTILLERY,
             'title' => 'Rocket Artillery',
             'class' => UnitType::CLASS_SIEGE,
             'type' => UnitType::TYPE_SUPPORT,
@@ -760,7 +761,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 61,
+            'model' => PohModel::UNIT_RAFT,
             'title' => 'Raft',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -772,7 +773,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 62,
+            'model' => PohModel::UNIT_GALLEY,
             'title' => 'Galley',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -784,7 +785,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 63,
+            'model' => PohModel::UNIT_BIREME,
             'title' => 'Bireme',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -796,7 +797,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 64,
+            'model' => PohModel::UNIT_COG,
             'title' => 'Cog',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -808,7 +809,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 65,
+            'model' => PohModel::UNIT_CARAVEL,
             'title' => 'Caravel',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -822,7 +823,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 66,
+            'model' => PohModel::UNIT_FRIGATE,
             'title' => 'Frigate',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -836,7 +837,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 67,
+            'model' => PohModel::UNIT_BRIG,
             'title' => 'Brig',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -850,7 +851,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 68,
+            'model' => PohModel::UNIT_DESTROYER,
             'title' => 'Destroyer',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -864,7 +865,7 @@ class UnitTypes
             'moves' => 5,
         ],
         [
-            'id' => 69,
+            'model' => PohModel::UNIT_CORVETTE,
             'title' => 'Corvette',
             'class' => UnitType::CLASS_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -878,7 +879,7 @@ class UnitTypes
             'moves' => 5,
         ],
         [
-            'id' => 70,
+            'model' => PohModel::UNIT_STEALTH_CORVETTE,
             'title' => 'Stealth Corvette',
             'class' => UnitType::CLASS_STEALTH_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -892,7 +893,7 @@ class UnitTypes
             'moves' => 5,
         ],
         [
-            'id' => 71,
+            'model' => PohModel::UNIT_TRIREME,
             'title' => 'Trireme',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -904,7 +905,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 72,
+            'model' => PohModel::UNIT_GALLEASS,
             'title' => 'Galleass',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -916,7 +917,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 73,
+            'model' => PohModel::UNIT_GALLEON,
             'title' => 'Galleon',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -930,7 +931,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 74,
+            'model' => PohModel::UNIT_SHIP_OF_THE_LINE,
             'title' => 'Ship-of-the-Line',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -944,7 +945,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 75,
+            'model' => PohModel::UNIT_ARMORED_FRIGATE,
             'title' => 'Armored Frigate',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -958,7 +959,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 76,
+            'model' => PohModel::UNIT_DREADNOUGHT,
             'title' => 'Dreadnought',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -972,7 +973,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 77,
+            'model' => PohModel::UNIT_BATTLESHIP,
             'title' => 'Battleship',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -986,7 +987,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 78,
+            'model' => PohModel::UNIT_IRONCLAD,
             'title' => 'Ironclad',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -1000,7 +1001,7 @@ class UnitTypes
             'moves' => 3,
         ],
         [
-            'id' => 79,
+            'model' => PohModel::UNIT_CARRIER,
             'title' => 'Carrier',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -1012,7 +1013,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 80,
+            'model' => PohModel::UNIT_NUCLEAR_CARRIER,
             'title' => 'Nuclear Carrier',
             'class' => UnitType::CLASS_HEAVY_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -1024,7 +1025,7 @@ class UnitTypes
             'moves' => 5,
         ],
         [
-            'id' => 81,
+            'model' => PohModel::UNIT_PRIVATEER,
             'title' => 'Privateer',
             'class' => UnitType::CLASS_STEALTH_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -1038,7 +1039,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 82,
+            'model' => PohModel::UNIT_SUBMARINE,
             'title' => 'Submarine',
             'class' => UnitType::CLASS_STEALTH_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -1052,7 +1053,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 83,
+            'model' => PohModel::UNIT_HEAVY_SUBMARINE,
             'title' => 'Heavy Submarine',
             'class' => UnitType::CLASS_STEALTH_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -1066,7 +1067,7 @@ class UnitTypes
             'moves' => 4,
         ],
         [
-            'id' => 84,
+            'model' => PohModel::UNIT_NUCLEAR_SUBMARINE,
             'title' => 'Nuclear Submarine',
             'class' => UnitType::CLASS_STEALTH_SHIP,
             'type' => UnitType::TYPE_REGULAR,
@@ -1080,7 +1081,7 @@ class UnitTypes
             'moves' => 5,
         ],
         [
-            'id' => 85,
+            'model' => PohModel::UNIT_BIPLANE,
             'title' => 'Biplane',
             'class' => UnitType::CLASS_FIGHTER,
             'type' => UnitType::TYPE_BASED,
@@ -1094,7 +1095,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 86,
+            'model' => PohModel::UNIT_FIGHTER,
             'title' => 'Fighter',
             'class' => UnitType::CLASS_FIGHTER,
             'type' => UnitType::TYPE_BASED,
@@ -1108,7 +1109,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 87,
+            'model' => PohModel::UNIT_FIGHTER_BOMBER,
             'title' => 'Fighter-Bomber',
             'class' => UnitType::CLASS_FIGHTER,
             'type' => UnitType::TYPE_BASED,
@@ -1122,7 +1123,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 88,
+            'model' => PohModel::UNIT_JET_FIGHTER,
             'title' => 'Jet Fighter',
             'class' => UnitType::CLASS_FIGHTER,
             'type' => UnitType::TYPE_BASED,
@@ -1136,7 +1137,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 89,
+            'model' => PohModel::UNIT_STRIKE_FIGHTER,
             'title' => 'Strike Fighter',
             'class' => UnitType::CLASS_FIGHTER,
             'type' => UnitType::TYPE_BASED,
@@ -1150,7 +1151,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 90,
+            'model' => PohModel::UNIT_STEALTH_FIGHTER,
             'title' => 'Stealth Fighter',
             'class' => UnitType::CLASS_FIGHTER,
             'type' => UnitType::TYPE_BASED,
@@ -1164,7 +1165,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 91,
+            'model' => PohModel::UNIT_AIRSHIP,
             'title' => 'Airship',
             'class' => UnitType::CLASS_BOMBER,
             'type' => UnitType::TYPE_BASED,
@@ -1178,7 +1179,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 92,
+            'model' => PohModel::UNIT_BOMBER,
             'title' => 'Bomber',
             'class' => UnitType::CLASS_BOMBER,
             'type' => UnitType::TYPE_BASED,
@@ -1192,7 +1193,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 93,
+            'model' => PohModel::UNIT_JET_BOMBER,
             'title' => 'Jet Bomber',
             'class' => UnitType::CLASS_BOMBER,
             'type' => UnitType::TYPE_BASED,
@@ -1206,7 +1207,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 94,
+            'model' => PohModel::UNIT_HYPERSONIC_BOMBER,
             'title' => 'Hypersonic Bomber',
             'class' => UnitType::CLASS_BOMBER,
             'type' => UnitType::TYPE_BASED,
@@ -1220,7 +1221,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 95,
+            'model' => PohModel::UNIT_STEALTH_BOMBER,
             'title' => 'Stealth Bomber',
             'class' => UnitType::CLASS_BOMBER,
             'type' => UnitType::TYPE_BASED,
@@ -1234,7 +1235,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 96,
+            'model' => PohModel::UNIT_ATOMIC_BOMB,
             'title' => 'Atomic Bomb',
             'class' => UnitType::CLASS_BOMBER,
             'type' => UnitType::TYPE_BASED,
@@ -1248,7 +1249,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 97,
+            'model' => PohModel::UNIT_HYDROGEN_BOMB,
             'title' => 'Hydrogen Bomb',
             'class' => UnitType::CLASS_BOMBER,
             'type' => UnitType::TYPE_BASED,
@@ -1262,7 +1263,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 98,
+            'model' => PohModel::UNIT_MISSILE,
             'title' => 'Missile',
             'class' => UnitType::CLASS_MISSILE,
             'type' => UnitType::TYPE_BASED,
@@ -1276,7 +1277,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 99,
+            'model' => PohModel::UNIT_CRUISE_MISSILE,
             'title' => 'Cruise Missile',
             'class' => UnitType::CLASS_MISSILE,
             'type' => UnitType::TYPE_BASED,
@@ -1290,7 +1291,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 100,
+            'model' => PohModel::UNIT_TACTICAL_NUKE,
             'title' => 'Tactical Nuke',
             'class' => UnitType::CLASS_MISSILE,
             'type' => UnitType::TYPE_BASED,
@@ -1304,7 +1305,7 @@ class UnitTypes
             'moves' => 1,
         ],
         [
-            'id' => 101,
+            'model' => PohModel::UNIT_ICBM,
             'title' => 'ICBM',
             'class' => UnitType::CLASS_MISSILE,
             'type' => UnitType::TYPE_BASED,

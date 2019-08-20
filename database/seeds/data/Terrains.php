@@ -2,72 +2,143 @@
 
 namespace database\seeds\data;
 
+use App\Models\PohModel;
+use App\Models\Types\Terrain;
+
 class Terrains
 {
-    const MODEL = \App\Models\Types\Terrain::class;
+    const MODEL = Terrain::class;
     const DATA = [
         [
-            'id' => 1,
-            'title' => 'Grass',
-            'type' => 'grass',
+            'model' => PohModel::TERRAIN_GRASS,
+            'title' => PohModel::TERRAIN_TYPE_GRASS,
+            'type' => PohModel::TERRAIN_TYPE_GRASS,
             'background' => '',
-            'biome_ids' => '[2,3,5]',
+            'biomes' => [
+                PohModel::BIOME_SUB_ARCTIC,
+                PohModel::BIOME_TEMPERATE,
+                PohModel::BIOME_SUB_TROPIC
+            ],
         ],
         [
-            'id' => 2,
+            'model' => PohModel::TERRAIN_TROPICAL_GRASS,
             'title' => 'Tropical Grass',
-            'type' => 'grass',
+            'type' => PohModel::TERRAIN_TYPE_GRASS,
             'background' => '',
-            'biome_ids' => '[7]',
+            'biomes' => [7],
         ],
         [
-            'id' => 3,
+            'model' => PohModel::TERRAIN_TUNDRA,
             'title' => 'Tundra',
-            'type' => 'plains',
+            'type' => PohModel::TERRAIN_TYPE_PLAINS,
             'background' => '',
-            'biome_ids' => '[1]',
+            'biomes' => [PohModel::BIOME_ARCTIC],
         ],
         [
-            'id' => 4,
-            'title' => 'Plains',
-            'type' => 'plains',
+            'model' => PohModel::TERRAIN_PLAINS,
+            'title' => PohModel::TERRAIN_TYPE_PLAINS,
+            'type' => PohModel::TERRAIN_TYPE_PLAINS,
             'background' => '',
-            'biome_ids' => '[2,3,5]',
+            'biomes' => [
+                PohModel::BIOME_SUB_ARCTIC,
+                PohModel::BIOME_TEMPERATE,
+                PohModel::BIOME_SUB_TROPIC
+            ],
         ],
         [
-            'id' => 5,
+            'model' => PohModel::TERRAIN_STEPPE,
             'title' => 'Steppe',
-            'type' => 'plains',
+            'type' => PohModel::TERRAIN_TYPE_PLAINS,
             'background' => '',
-            'biome_ids' => '[4]',
+            'biomes' => [PohModel::BIOME_CONTINENTAL],
         ],
         [
-            'id' => 6,
+            'model' => PohModel::TERRAIN_SAVANNA,
             'title' => 'Savanna',
-            'type' => 'plains',
+            'type' => PohModel::TERRAIN_TYPE_PLAINS,
             'background' => '',
-            'biome_ids' => '[6]',
+            'biomes' => [PohModel::BIOME_ARID],
         ],
         [
-            'id' => 7,
+            'model' => PohModel::TERRAIN_ICE,
             'title' => 'Ice',
-            'type' => 'desolate',
+            'type' => PohModel::TERRAIN_TYPE_DESOLATE,
             'background' => '',
-            'biome_ids' => '[1]',
+            'biomes' => [PohModel::BIOME_ARCTIC],
         ],
         [
-            'id' => 8,
+            'model' => PohModel::TERRAIN_SHRUBLAND,
             'title' => 'Shrubland',
-            'type' => 'desolate',
+            'type' => PohModel::TERRAIN_TYPE_DESOLATE,
             'background' => '',
-            'biome_ids' => '[4]',
+            'biomes' => [PohModel::BIOME_CONTINENTAL],
         ],
         [
-            'id' => 9,
+            'model' => PohModel::TERRAIN_DESERT,
             'title' => 'Desert',
-            'type' => 'desolate',
+            'type' => PohModel::TERRAIN_TYPE_DESOLATE,
             'background' => '',
-            'biome_ids' => '[6]',
+            'biomes' => [PohModel::BIOME_ARID],
+        ],
+        [
+            'model' => PohModel::TERRAIN_GREAT_RIVER,
+            'title' => 'Great River',
+            'type' => PohModel::TERRAIN_TYPE_FRESH_WATER,
+            'background' => '',
+            'biomes' => [
+                PohModel::BIOME_ARCTIC,
+                PohModel::BIOME_SUB_ARCTIC,
+                PohModel::BIOME_TEMPERATE,
+                PohModel::BIOME_CONTINENTAL,
+                PohModel::BIOME_SUB_TROPIC,
+                PohModel::BIOME_TROPIC,
+                PohModel::BIOME_ARID
+            ],
+        ],
+        [
+            'model' => PohModel::TERRAIN_LAKE,
+            'title' => 'Lake',
+            'type' => PohModel::TERRAIN_TYPE_FRESH_WATER,
+            'background' => '',
+            'biomes' => [
+                PohModel::BIOME_ARCTIC,
+                PohModel::BIOME_SUB_ARCTIC,
+                PohModel::BIOME_TEMPERATE,
+                PohModel::BIOME_CONTINENTAL,
+                PohModel::BIOME_SUB_TROPIC,
+                PohModel::BIOME_TROPIC,
+                PohModel::BIOME_ARID
+            ],
+        ],
+        [
+            'model' => PohModel::TERRAIN_COAST,
+            'title' => 'Coast',
+            'type' => PohModel::TERRAIN_TYPE_SALT_WATER,
+            'background' => '',
+            'biomes' => [
+                PohModel::BIOME_ARCTIC,
+                PohModel::BIOME_SUB_ARCTIC,
+                PohModel::BIOME_TEMPERATE,
+                PohModel::BIOME_CONTINENTAL,
+                PohModel::BIOME_SUB_TROPIC,
+                PohModel::BIOME_TROPIC,
+                PohModel::BIOME_ARID
+            ],
+        ],
+        [
+            'model' => PohModel::TERRAIN_OCEAN,
+            'title' => 'Ocean',
+            'type' => PohModel::TERRAIN_TYPE_SALT_WATER,
+            'background' => '',
+            'biomes' => [
+                PohModel::BIOME_ARCTIC,
+                PohModel::BIOME_SUB_ARCTIC,
+                PohModel::BIOME_TEMPERATE,
+                PohModel::BIOME_CONTINENTAL,
+                PohModel::BIOME_SUB_TROPIC,
+                PohModel::BIOME_TROPIC,
+                PohModel::BIOME_ARID
+            ],
         ],
     ];
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace database\seeds\data;
+use App\Models\PohModel;
 use App\Models\Types\Biome;
 
 class Biomes
@@ -8,37 +9,37 @@ class Biomes
     const MODEL = Biome::class;
     const DATA = [
         [
-            'id' => 1,
+            'model' => PohModel::BIOME_ARCTIC,
             'title' => 'Arctic',
             'color' => 'light-blue',
         ],
         [
-            'id' => 2,
+            'model' => PohModel::BIOME_SUB_ARCTIC,
             'title' => 'Sub-Arctic',
             'color' => 'light-gray',
         ],
         [
-            'id' => 3,
+            'model' => PohModel::BIOME_TEMPERATE,
             'title' => 'Temperate',
             'color' => 'army-green',
         ],
         [
-            'id' => 4,
+            'model' => PohModel::BIOME_CONTINENTAL,
             'title' => 'Continental',
             'color' => 'light-green',
         ],
         [
-            'id' => 5,
+            'model' => PohModel::BIOME_SUB_TROPIC,
             'title' => 'Sub-Tropic',
             'color' => 'pear',
         ],
         [
-            'id' => 6,
+            'model' => PohModel::BIOME_ARID,
             'title' => 'Arid',
             'color' => 'golden-yellow',
         ],
         [
-            'id' => 7,
+            'model' => PohModel::BIOME_TROPIC,
             'title' => 'Tropic',
             'color' => 'dark-green',
         ],

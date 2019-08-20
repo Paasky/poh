@@ -1,33 +1,41 @@
 <?php
 
 namespace database\seeds\data;
+use App\Models\PohModel;
+use App\Models\Types\CityType;
+
 class CityTypes
 {
-    const MODEL = \App\Models\Types\CityType::class;
+    const MODEL = CityType::class;
     const DATA = [
         [
-            'id' => 1,
+            'model' => PohModel::CITY_VILLAGE,
             'title' => 'Village',
             'icon' => '',
         ],
         [
-            'id' => 2,
+            'model' => PohModel::CITY_HAMLET,
             'title' => 'Hamlet',
             'icon' => '',
         ],
         [
-            'id' => 3,
+            'model' => PohModel::CITY_TOWN,
             'title' => 'Town',
             'icon' => '',
         ],
         [
-            'id' => 4,
+            'model' => PohModel::CITY_CITY,
             'title' => 'City',
             'icon' => '',
         ],
         [
-            'id' => 5,
+            'model' => PohModel::CITY_METROPOLIS,
             'title' => 'Metropolis',
+            'icon' => '',
+        ],
+        [
+            'model' => PohModel::CITY_MEGALOPOLIS,
+            'title' => 'Megalopolis',
             'icon' => '',
         ],
     ];

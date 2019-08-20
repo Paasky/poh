@@ -1,49 +1,52 @@
 <?php
 
 namespace database\seeds\data;
+use App\Models\PohModel;
+use App\Models\Types\Feature;
+
 class Features
 {
-    const MODEL = \App\Models\Types\Feature::class;
+    const MODEL = Feature::class;
     const DATA = [
         [
-            'id' => 1,
+            'model' => PohModel::FEATURE_TAIGA,
             'title' => 'Taiga',
             'background' => '',
             'terrain_ids' => '[3]',
         ],
         [
-            'id' => 2,
+            'model' => PohModel::FEATURE_LUSH_FOREST,
             'title' => 'Lush Forest',
             'background' => '',
             'terrain_ids' => '[1]',
         ],
         [
-            'id' => 3,
+            'model' => PohModel::FEATURE_PINE_FOREST,
             'title' => 'Pine Forest',
             'background' => '',
             'terrain_ids' => '[4,5]',
         ],
         [
-            'id' => 4,
+            'model' => PohModel::FEATURE_DRY_FOREST,
             'title' => 'Dry Forest',
             'background' => '',
             'terrain_ids' => '[6]',
         ],
         [
-            'id' => 5,
-            'title' => 'Rainforest',
+            'model' => PohModel::FEATURE_RAIN_FOREST,
+            'title' => 'Rain Forest',
             'background' => '',
             'terrain_ids' => '[2]',
         ],
         [
-            'id' => 6,
+            'model' => PohModel::FEATURE_SWAMP,
             'title' => 'Swamp',
             'background' => '',
             'terrain_ids' => '[1]',
             'landscape_ids' => '[2]',
         ],
         [
-            'id' => 7,
+            'model' => PohModel::FEATURE_FLOOD_PLAIN,
             'title' => 'Floodplain',
             'background' => '',
             'terrain_ids' => '[]',
@@ -51,7 +54,7 @@ class Features
             'require_river' => true,
         ],
         [
-            'id' => 8,
+            'model' => PohModel::FEATURE_DELTA,
             'title' => 'Delta',
             'background' => '',
             'terrain_ids' => '[]',
@@ -60,13 +63,13 @@ class Features
             'require_water' => true,
         ],
         [
-            'id' => 9,
+            'model' => PohModel::FEATURE_SALT_PLAIN,
             'title' => 'Salt Plain',
             'background' => '',
             'terrain_ids' => '[9]',
         ],
         [
-            'id' => 10,
+            'model' => PohModel::FEATURE_OASIS,
             'title' => 'Oasis',
             'background' => '',
             'terrain_ids' => '[9]',

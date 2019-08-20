@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5c05f4e-4d16-43b8-9119-b56a776aa3e9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="c5c05f4e-4d16-43b8-9119-b56a776aa3e9" name="Default Changelist" comment="Create model constants">
+      <change afterPath="$PROJECT_DIR$/app/Models/PohModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Pekko.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Pekko.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Types/Ability.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Types/Ability.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/Abilities.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Abilities.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/Biomes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Biomes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/CityTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/CityTypes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/Features.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Features.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/Landscapes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Landscapes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/Resources.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Resources.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/TechRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/TechRequirements.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/Technologies.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Technologies.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/Terrains.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Terrains.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/data/UnitTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/UnitTypes.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,14 +165,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds/data" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pekko\Documents\pages-of-history\database\seeds\data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pekko\Documents\pages-of-history\database\seeds\data" />
       <recent name="C:\Users\Pekko\Documents\pages-of-history\app\Models\Types" />
       <recent name="C:\Users\Pekko\Documents\pages-of-history\app\Traits" />
       <recent name="C:\Users\Pekko\Documents\pages-of-history\app" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Pekko\Documents\pages-of-history\database\seeds\data" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -193,6 +206,31 @@
       <workItem from="1565102452235" duration="35787000" />
       <workItem from="1566053476862" duration="7308000" />
     </task>
+    <task id="LOCAL−00001" summary="Ignore .idea folder">
+      <created>1566128869078</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1566128869078</updated>
+    </task>
+    <task id="LOCAL−00002" summary="Ignore .idea folder">
+      <created>1566128897407</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1566128897407</updated>
+    </task>
+    <task id="LOCAL−00003" summary="Ignore .idea folder">
+      <created>1566128916442</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1566128916442</updated>
+    </task>
+    <task id="LOCAL−00004" summary="Ignore .idea folder">
+      <created>1566128949142</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1566128949142</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,5 +246,11 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="New seeders" />
+    <MESSAGE value="Ignore .idea folder" />
+    <MESSAGE value="Create model constants" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create model constants" />
   </component>
 </project>

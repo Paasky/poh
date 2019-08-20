@@ -2,6 +2,7 @@
 
 namespace database\seeds\data;
 
+use App\Models\PohModel;
 use App\Models\Types\Technology;
 
 class Technologies
@@ -9,7 +10,7 @@ class Technologies
     const MODEL = Technology::class;
     const DATA = [
         [
-            'id' => 1,
+            'model' => PohModel::TECH_AGRICULTURE,
             'title' => 'Agriculture',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -18,7 +19,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 2,
+            'model' => PohModel::TECH_SAILING,
             'title' => 'Sailing',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -27,7 +28,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 3,
+            'model' => PohModel::TECH_MYSTICISM,
             'title' => 'Mysticism',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -36,7 +37,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 4,
+            'model' => PohModel::TECH_POTTERY,
             'title' => 'Pottery',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -45,7 +46,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 5,
+            'model' => PohModel::TECH_STONE_WORKING,
             'title' => 'Stone Working',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -54,7 +55,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 6,
+            'model' => PohModel::TECH_ASTROLOGY,
             'title' => 'Astrology',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -63,7 +64,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 7,
+            'model' => PohModel::TECH_COPPER_WORKING,
             'title' => 'Copper Working',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -72,7 +73,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 8,
+            'model' => PohModel::TECH_CENTRAL_GOVERNANCE,
             'title' => 'Central Governance',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -81,7 +82,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 9,
+            'model' => PohModel::TECH_MINING,
             'title' => 'Mining',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -90,7 +91,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 10,
+            'model' => PohModel::TECH_ARCHERY,
             'title' => 'Archery',
             'era' => Technology::ERA_PREHISTORIC,
             'icon' => '',
@@ -99,7 +100,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 11,
+            'model' => PohModel::TECH_WRITING,
             'title' => 'Writing',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -108,7 +109,7 @@ class Technologies
             'y' => 2,
         ],
         [
-            'id' => 12,
+            'model' => PohModel::TECH_BRONZE_WORKING,
             'title' => 'Bronze Working',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -117,7 +118,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 13,
+            'model' => PohModel::TECH_ANIMAL_HUSBANDRY,
             'title' => 'Animal Husbandry',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -126,7 +127,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 14,
+            'model' => PohModel::TECH_CELESTIAL_NAVIGATION,
             'title' => 'Celestial Navigation',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -135,7 +136,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 15,
+            'model' => PohModel::TECH_CALENDAR,
             'title' => 'Calendar',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -144,7 +145,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 16,
+            'model' => PohModel::TECH_MASONRY,
             'title' => 'Masonry',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -153,7 +154,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 17,
+            'model' => PohModel::TECH_WHEEL,
             'title' => 'Wheel',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -162,7 +163,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 18,
+            'model' => PohModel::TECH_ARTISANSHIP,
             'title' => 'Artisanship',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -171,7 +172,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 19,
+            'model' => PohModel::TECH_IRRIGATION,
             'title' => 'Irrigation',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -180,7 +181,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 20,
+            'model' => PohModel::TECH_ORGANIZED_RELIGION,
             'title' => 'Organized Religion',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -189,7 +190,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 21,
+            'model' => PohModel::TECH_CODE_OF_LAW,
             'title' => 'Code of Law',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -198,7 +199,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 22,
+            'model' => PohModel::TECH_CURRENCY,
             'title' => 'Currency',
             'era' => Technology::ERA_BRONZE,
             'icon' => '',
@@ -207,7 +208,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 23,
+            'model' => PohModel::TECH_ALPHABET,
             'title' => 'Alphabet',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -216,7 +217,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 24,
+            'model' => PohModel::TECH_IRON_WORKING,
             'title' => 'Iron Working',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -225,7 +226,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 25,
+            'model' => PohModel::TECH_HORSEBACK_RIDING,
             'title' => 'Horseback Riding',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -234,7 +235,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 26,
+            'model' => PohModel::TECH_SHIP_BUILDING,
             'title' => 'Ship Building',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -243,7 +244,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 27,
+            'model' => PohModel::TECH_MATHEMATICS,
             'title' => 'Mathematics',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -252,7 +253,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 28,
+            'model' => PohModel::TECH_CONSTRUCTION,
             'title' => 'Construction',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -261,7 +262,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 29,
+            'model' => PohModel::TECH_BUREAUCRACY,
             'title' => 'Bureaucracy',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -270,7 +271,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 30,
+            'model' => PohModel::TECH_SCULPTING,
             'title' => 'Sculpting',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -279,7 +280,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 31,
+            'model' => PohModel::TECH_SPORTS,
             'title' => 'Sports',
             'era' => Technology::ERA_IRON,
             'icon' => '',
@@ -288,7 +289,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 32,
+            'model' => PohModel::TECH_PHILOSOPHY,
             'title' => 'Philosophy',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -297,7 +298,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 33,
+            'model' => PohModel::TECH_ENGINEERING,
             'title' => 'Engineering',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -306,7 +307,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 34,
+            'model' => PohModel::TECH_DRAMA,
             'title' => 'Drama',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -315,7 +316,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 35,
+            'model' => PohModel::TECH_MILITARY_DISCIPLINE,
             'title' => 'Military Discipline',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -324,7 +325,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 36,
+            'model' => PohModel::TECH_ARCH_BUILDING,
             'title' => 'Arch Building',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -333,7 +334,7 @@ class Technologies
             'y' => 2,
         ],
         [
-            'id' => 37,
+            'model' => PohModel::TECH_COMPOSITE_BOW,
             'title' => 'Composite Bow',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -342,7 +343,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 38,
+            'model' => PohModel::TECH_PROFESSIONAL_ARMY,
             'title' => 'Professional Army',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -351,7 +352,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 39,
+            'model' => PohModel::TECH_GLASSBLOWING,
             'title' => 'Glassblowing',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -360,7 +361,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 40,
+            'model' => PohModel::TECH_TREADWHEEL_CRANE,
             'title' => 'Treadwheel Crane',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -369,7 +370,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 41,
+            'model' => PohModel::TECH_STATE_RELIGION,
             'title' => 'State Religion',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -378,7 +379,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 42,
+            'model' => PohModel::TECH_PAPER,
             'title' => 'Paper',
             'era' => Technology::ERA_CLASSICAL,
             'icon' => '',
@@ -387,7 +388,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 43,
+            'model' => PohModel::TECH_THEOLOGY,
             'title' => 'Theology',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -396,7 +397,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 44,
+            'model' => PohModel::TECH_STIRRUPS,
             'title' => 'Stirrups',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -405,7 +406,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 45,
+            'model' => PohModel::TECH_CHAINMAIL,
             'title' => 'Chainmail',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -414,7 +415,7 @@ class Technologies
             'y' => 6,
         ],
         [
-            'id' => 46,
+            'model' => PohModel::TECH_CIVIL_SERVICE,
             'title' => 'Civil Service',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -423,7 +424,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 47,
+            'model' => PohModel::TECH_APPRENTICESHIP,
             'title' => 'Apprenticeship',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -432,7 +433,7 @@ class Technologies
             'y' => 6,
         ],
         [
-            'id' => 48,
+            'model' => PohModel::TECH_DIVINE_RIGHT,
             'title' => 'Divine Right',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -441,7 +442,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 49,
+            'model' => PohModel::TECH_METAL_CASTING,
             'title' => 'Metal Casting',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -450,7 +451,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 50,
+            'model' => PohModel::TECH_CROP_ROTATION,
             'title' => 'Crop Rotation',
             'era' => Technology::ERA_MEDIEVAL,
             'icon' => '',
@@ -459,7 +460,7 @@ class Technologies
             'y' => 6,
         ],
         [
-            'id' => 51,
+            'model' => PohModel::TECH_FEUDALISM,
             'title' => 'Feudalism',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -468,7 +469,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 52,
+            'model' => PohModel::TECH_MILITARY_TACTICS,
             'title' => 'Military Tactics',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -477,7 +478,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 53,
+            'model' => PohModel::TECH_STEEL,
             'title' => 'Steel',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -486,7 +487,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 54,
+            'model' => PohModel::TECH_GUILDS,
             'title' => 'Guilds',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -495,7 +496,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 55,
+            'model' => PohModel::TECH_CASTLES,
             'title' => 'Castles',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -504,7 +505,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 56,
+            'model' => PohModel::TECH_MACHINERY,
             'title' => 'Machinery',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -513,7 +514,7 @@ class Technologies
             'y' => 6,
         ],
         [
-            'id' => 57,
+            'model' => PohModel::TECH_CHIVALRY,
             'title' => 'Chivalry',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -522,7 +523,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 58,
+            'model' => PohModel::TECH_SIEGE_TACTICS,
             'title' => 'Siege Tactics',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -531,7 +532,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 59,
+            'model' => PohModel::TECH_COMPASS,
             'title' => 'Compass',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -540,7 +541,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 60,
+            'model' => PohModel::TECH_BOOKBINDING,
             'title' => 'Bookbinding',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -549,7 +550,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 61,
+            'model' => PohModel::TECH_WEAVING_MACHINES,
             'title' => 'Weaving Machines',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -558,7 +559,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 62,
+            'model' => PohModel::TECH_OPTICS,
             'title' => 'Optics',
             'era' => Technology::ERA_HIGH_MEDIEVAL,
             'icon' => '',
@@ -567,7 +568,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 63,
+            'model' => PohModel::TECH_GUNPOWDER,
             'title' => 'Gunpowder',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -576,7 +577,7 @@ class Technologies
             'y' => 2,
         ],
         [
-            'id' => 64,
+            'model' => PohModel::TECH_BANKING,
             'title' => 'Banking',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -585,7 +586,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 65,
+            'model' => PohModel::TECH_MASS_PRODUCTION,
             'title' => 'Mass Production',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -594,7 +595,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 66,
+            'model' => PohModel::TECH_PERSPECTIVE,
             'title' => 'Perspective',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -603,7 +604,7 @@ class Technologies
             'y' => 2,
         ],
         [
-            'id' => 67,
+            'model' => PohModel::TECH_ARCHITECTURE,
             'title' => 'Architecture',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -612,7 +613,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 68,
+            'model' => PohModel::TECH_MILITARY_ENGINEERING,
             'title' => 'Military Engineering',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -621,7 +622,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 69,
+            'model' => PohModel::TECH_INVENTION,
             'title' => 'Invention',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -630,7 +631,7 @@ class Technologies
             'y' => 2,
         ],
         [
-            'id' => 70,
+            'model' => PohModel::TECH_CARTOGRAPHY,
             'title' => 'Cartography',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -639,7 +640,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 71,
+            'model' => PohModel::TECH_SQUARE_RIGGING,
             'title' => 'Square Rigging',
             'era' => Technology::ERA_RENAISSANCE,
             'icon' => '',
@@ -648,7 +649,7 @@ class Technologies
             'y' => 6,
         ],
         [
-            'id' => 72,
+            'model' => PohModel::TECH_PRINTING,
             'title' => 'Printing',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -657,7 +658,7 @@ class Technologies
             'y' => 2,
         ],
         [
-            'id' => 73,
+            'model' => PohModel::TECH_ASTRONOMY,
             'title' => 'Astronomy',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -666,7 +667,7 @@ class Technologies
             'y' => 6,
         ],
         [
-            'id' => 74,
+            'model' => PohModel::TECH_EDUCATION,
             'title' => 'Education',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -675,7 +676,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 75,
+            'model' => PohModel::TECH_MERCANTILISM,
             'title' => 'Mercantilism',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -684,7 +685,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 76,
+            'model' => PohModel::TECH_COLONIZATION,
             'title' => 'Colonization',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -693,7 +694,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 77,
+            'model' => PohModel::TECH_ECONOMICS,
             'title' => 'Economics',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -702,7 +703,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 78,
+            'model' => PohModel::TECH_CHEMISTRY,
             'title' => 'Chemistry',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -711,7 +712,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 79,
+            'model' => PohModel::TECH_THEATER,
             'title' => 'Theater',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -720,7 +721,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 80,
+            'model' => PohModel::TECH_NAVIGATION,
             'title' => 'Navigation',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -729,7 +730,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 81,
+            'model' => PohModel::TECH_METALLURGY,
             'title' => 'Metallurgy',
             'era' => Technology::ERA_DISCOVERY,
             'icon' => '',
@@ -738,7 +739,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 82,
+            'model' => PohModel::TECH_ROYAL_CHARTER,
             'title' => 'Royal Charter',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -747,7 +748,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 83,
+            'model' => PohModel::TECH_CORPORATION,
             'title' => 'Corporation',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -756,7 +757,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 84,
+            'model' => PohModel::TECH_LIBERALISM,
             'title' => 'Liberalism',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -765,7 +766,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 85,
+            'model' => PohModel::TECH_DIPLOMACY,
             'title' => 'Diplomacy',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -774,7 +775,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 86,
+            'model' => PohModel::TECH_SCIENTIFIC_THEORY,
             'title' => 'Scientific Theory',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -783,7 +784,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 87,
+            'model' => PohModel::TECH_CONSTITUTION,
             'title' => 'Constitution',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -792,7 +793,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 88,
+            'model' => PohModel::TECH_NATIONALISM,
             'title' => 'Nationalism',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -801,7 +802,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 89,
+            'model' => PohModel::TECH_VACCINES,
             'title' => 'Vaccines',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -810,7 +811,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 90,
+            'model' => PohModel::TECH_STEAM_POWER,
             'title' => 'Steam Power',
             'era' => Technology::ERA_ENLIGHTENMENT,
             'icon' => '',
@@ -819,7 +820,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 91,
+            'model' => PohModel::TECH_CONSCRIPTION,
             'title' => 'Conscription',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -828,7 +829,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 92,
+            'model' => PohModel::TECH_RIFLING,
             'title' => 'Rifling',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -837,7 +838,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 93,
+            'model' => PohModel::TECH_INDUSTRIALIZATION,
             'title' => 'Industrialization',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -846,7 +847,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 94,
+            'model' => PohModel::TECH_ARCHEOLOGY,
             'title' => 'Archeology',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -855,7 +856,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 95,
+            'model' => PohModel::TECH_MILITARY_SCIENCE,
             'title' => 'Military Science',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -864,7 +865,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 96,
+            'model' => PohModel::TECH_RAILROAD,
             'title' => 'Railroad',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -873,7 +874,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 97,
+            'model' => PohModel::TECH_COAL_GASIFICATION,
             'title' => 'Coal Gasification',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -882,7 +883,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 98,
+            'model' => PohModel::TECH_TELEGRAPH,
             'title' => 'Telegraph',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -891,7 +892,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 99,
+            'model' => PohModel::TECH_FERTILIZER,
             'title' => 'Fertilizer',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -900,7 +901,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 100,
+            'model' => PohModel::TECH_NITROGLYCERIN,
             'title' => 'Nitroglycerin',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -909,7 +910,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 101,
+            'model' => PohModel::TECH_BIOLOGY,
             'title' => 'Biology',
             'era' => Technology::ERA_INDUSTRIAL,
             'icon' => '',
@@ -918,7 +919,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 102,
+            'model' => PohModel::TECH_HAUTE_COUTURE,
             'title' => 'Haute Couture',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -927,7 +928,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 103,
+            'model' => PohModel::TECH_STEEL_MILLING,
             'title' => 'Steel Milling',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -936,7 +937,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 104,
+            'model' => PohModel::TECH_SANITIZATION,
             'title' => 'Sanitization',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -945,7 +946,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 105,
+            'model' => PohModel::TECH_ELECTRICITY,
             'title' => 'Electricity',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -954,7 +955,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 106,
+            'model' => PohModel::TECH_SOCIALISM,
             'title' => 'Socialism',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -963,7 +964,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 107,
+            'model' => PohModel::TECH_SMOKELESS_POWDER,
             'title' => 'Smokeless Powder',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -972,7 +973,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 108,
+            'model' => PohModel::TECH_COMBUSTION,
             'title' => 'Combustion',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -981,7 +982,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 109,
+            'model' => PohModel::TECH_RADIO,
             'title' => 'Radio',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -990,7 +991,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 110,
+            'model' => PohModel::TECH_CENTRAL_BANKING,
             'title' => 'Central Banking',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -999,7 +1000,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 111,
+            'model' => PohModel::TECH_DYNAMITE,
             'title' => 'Dynamite',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -1008,7 +1009,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 112,
+            'model' => PohModel::TECH_FLIGHT,
             'title' => 'Flight',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -1017,7 +1018,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 113,
+            'model' => PohModel::TECH_BALLISTICS,
             'title' => 'Ballistics',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -1026,7 +1027,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 114,
+            'model' => PohModel::TECH_REPLACEABLE_PARTS,
             'title' => 'Replaceable Parts',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -1035,7 +1036,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 115,
+            'model' => PohModel::TECH_REFRIGERATION,
             'title' => 'Refrigeration',
             'era' => Technology::ERA_GUILDED,
             'icon' => '',
@@ -1044,7 +1045,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 116,
+            'model' => PohModel::TECH_ART_DECO,
             'title' => 'Art Deco',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1053,7 +1054,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 117,
+            'model' => PohModel::TECH_ASSAULT_TACTICS,
             'title' => 'Assault Tactics',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1062,7 +1063,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 118,
+            'model' => PohModel::TECH_ASSEMBLY_LINE,
             'title' => 'Assembly Line',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1071,7 +1072,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 119,
+            'model' => PohModel::TECH_PENICILLIN,
             'title' => 'Penicillin',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1080,7 +1081,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 120,
+            'model' => PohModel::TECH_MILITARISM,
             'title' => 'Militarism',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1089,7 +1090,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 121,
+            'model' => PohModel::TECH_HYDRAULIC_ENGINEERING,
             'title' => 'Hydraulic Engineering',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1098,7 +1099,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 122,
+            'model' => PohModel::TECH_ELECTRONICS,
             'title' => 'Electronics',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1107,7 +1108,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 123,
+            'model' => PohModel::TECH_ATOMIC_THEORY,
             'title' => 'Atomic Theory',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1116,7 +1117,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 124,
+            'model' => PohModel::TECH_ROCKETRY,
             'title' => 'Rocketry',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1125,7 +1126,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 125,
+            'model' => PohModel::TECH_METAL_ALLOYS,
             'title' => 'Metal Alloys',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1134,7 +1135,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 126,
+            'model' => PohModel::TECH_RADAR,
             'title' => 'Radar',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1143,7 +1144,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 127,
+            'model' => PohModel::TECH_JET_ENGINE,
             'title' => 'Jet Engine',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1152,7 +1153,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 128,
+            'model' => PohModel::TECH_SYNTHETIC_MATERIALS,
             'title' => 'Synthetic Materials',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1161,7 +1162,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 129,
+            'model' => PohModel::TECH_COMBINED_ARMS,
             'title' => 'Combined Arms',
             'era' => Technology::ERA_MODERN,
             'icon' => '',
@@ -1170,7 +1171,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 130,
+            'model' => PohModel::TECH_PLASTICS,
             'title' => 'Plastics',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1179,7 +1180,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 131,
+            'model' => PohModel::TECH_NUCLEAR_FISSION,
             'title' => 'Nuclear Fission',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1188,7 +1189,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 132,
+            'model' => PohModel::TECH_TRANSISTOR,
             'title' => 'Transistor',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1197,7 +1198,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 133,
+            'model' => PohModel::TECH_MACROECONOMICS,
             'title' => 'Macroeconomics',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1206,7 +1207,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 134,
+            'model' => PohModel::TECH_ADVANCED_BALLISTICS,
             'title' => 'Advanced Ballistics',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1215,7 +1216,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 135,
+            'model' => PohModel::TECH_COMPUTERS,
             'title' => 'Computers',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1224,7 +1225,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 136,
+            'model' => PohModel::TECH_ECOLOGY,
             'title' => 'Ecology',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1233,7 +1234,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 137,
+            'model' => PohModel::TECH_TELECOMMUNICATIONS,
             'title' => 'Telecommunications',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1242,7 +1243,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 138,
+            'model' => PohModel::TECH_SATELLITES,
             'title' => 'Satellites',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1251,7 +1252,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 139,
+            'model' => PohModel::TECH_ENVIRONMENTALISM,
             'title' => 'Environmentalism',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1260,7 +1261,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 140,
+            'model' => PohModel::TECH_ROBOTICS,
             'title' => 'Robotics',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1269,7 +1270,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 141,
+            'model' => PohModel::TECH_GUIDANCE_SYSTEMS,
             'title' => 'Guidance Systems',
             'era' => Technology::ERA_ATOMIC,
             'icon' => '',
@@ -1278,7 +1279,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 142,
+            'model' => PohModel::TECH_COMPOSITES,
             'title' => 'Composites',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1287,7 +1288,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 143,
+            'model' => PohModel::TECH_MICROCHIPS,
             'title' => 'Microchips',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1296,7 +1297,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 144,
+            'model' => PohModel::TECH_LASERS,
             'title' => 'Lasers',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1305,7 +1306,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 145,
+            'model' => PohModel::TECH_GLOBALIZATION,
             'title' => 'Globalization',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1314,7 +1315,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 146,
+            'model' => PohModel::TECH_INTERNET,
             'title' => 'Internet',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1323,7 +1324,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 147,
+            'model' => PohModel::TECH_GENETICS,
             'title' => 'Genetics',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1332,7 +1333,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 148,
+            'model' => PohModel::TECH_STEALTH,
             'title' => 'Stealth',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1341,7 +1342,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 149,
+            'model' => PohModel::TECH_FIBER_OPTICS,
             'title' => 'Fiber Optics',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1350,7 +1351,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 150,
+            'model' => PohModel::TECH_PARTICLE_PHYSICS,
             'title' => 'Particle Physics',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1359,7 +1360,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 151,
+            'model' => PohModel::TECH_BIOTECHNOLOGY,
             'title' => 'Biotechnology',
             'era' => Technology::ERA_DIGITAL,
             'icon' => '',
@@ -1368,7 +1369,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 152,
+            'model' => PohModel::TECH_SUPERCONDUCTORS,
             'title' => 'Superconductors',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1377,7 +1378,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 153,
+            'model' => PohModel::TECH_CROWDSOURCING,
             'title' => 'Crowdsourcing',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1386,7 +1387,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 154,
+            'model' => PohModel::TECH_MASS_SURVEILLANCE,
             'title' => 'Mass Surveillance',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1395,7 +1396,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 155,
+            'model' => PohModel::TECH_QUANTUM_PHYSICS,
             'title' => 'Quantum Physics',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1404,7 +1405,7 @@ class Technologies
             'y' => 7,
         ],
         [
-            'id' => 156,
+            'model' => PohModel::TECH_NANOTECHNOLOGY,
             'title' => 'Nanotechnology',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1413,7 +1414,7 @@ class Technologies
             'y' => 2,
         ],
         [
-            'id' => 157,
+            'model' => PohModel::TECH_PRIVATE_SPACE_FLIGHT,
             'title' => 'Private Space Flight',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1422,7 +1423,7 @@ class Technologies
             'y' => 4,
         ],
         [
-            'id' => 158,
+            'model' => PohModel::TECH_BIOSYNTHETICS,
             'title' => 'Biosynthetics',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1431,7 +1432,7 @@ class Technologies
             'y' => 6,
         ],
         [
-            'id' => 159,
+            'model' => PohModel::TECH_QUANTUM_COMPUTING,
             'title' => 'Quantum Computing',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1440,7 +1441,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 160,
+            'model' => PohModel::TECH_CYBERNETICS,
             'title' => 'Cybernetics',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1449,7 +1450,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 161,
+            'model' => PohModel::TECH_WEAPONIZED_LASERS,
             'title' => 'Weaponized Lasers',
             'era' => Technology::ERA_INFORMATION,
             'icon' => '',
@@ -1458,7 +1459,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 162,
+            'model' => PohModel::TECH_ARTIFICIAL_INTELLIGENCE,
             'title' => 'Artificial Intelligence',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1467,7 +1468,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 163,
+            'model' => PohModel::TECH_CRYOGENICS,
             'title' => 'Cryogenics',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1476,7 +1477,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 164,
+            'model' => PohModel::TECH_NUCLEAR_FUSION,
             'title' => 'Nuclear Fusion',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1485,7 +1486,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 165,
+            'model' => PohModel::TECH_NEURAL_NETWORKS,
             'title' => 'Neural Networks',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1494,7 +1495,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 166,
+            'model' => PohModel::TECH_RAILGUNS,
             'title' => 'Railguns',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1503,7 +1504,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 167,
+            'model' => PohModel::TECH_FUSION_PROPULSION,
             'title' => 'Fusion Propulsion',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1512,7 +1513,7 @@ class Technologies
             'y' => 1,
         ],
         [
-            'id' => 168,
+            'model' => PohModel::TECH_NANOBOTS,
             'title' => 'Nanobots',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1521,7 +1522,7 @@ class Technologies
             'y' => 3,
         ],
         [
-            'id' => 169,
+            'model' => PohModel::TECH_CLONING,
             'title' => 'Cloning',
             'era' => Technology::ERA_NANO,
             'icon' => '',
@@ -1530,7 +1531,7 @@ class Technologies
             'y' => 5,
         ],
         [
-            'id' => 170,
+            'model' => PohModel::TECH_FUTURE_TECH,
             'title' => 'Future Tech',
             'era' => Technology::ERA_NANO,
             'icon' => '',

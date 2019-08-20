@@ -1,32 +1,45 @@
 <?php
 
 namespace database\seeds\data;
+use App\Models\PohModel;
+use App\Models\Types\Landscape;
+
 class Landscapes
 {
-    const MODEL = \App\Models\Types\Landscape::class;
+    const MODEL = Landscape::class;
     const DATA = [
         [
-            'id' => 1,
+            'model' => PohModel::LANDSCAPE_WATER,
+            'title' => 'Water',
+            'height' => -1,
+        ],
+        [
+            'model' => PohModel::LANDSCAPE_CANYON,
             'title' => 'Canyon',
             'height' => -1,
         ],
         [
-            'id' => 2,
+            'model' => PohModel::LANDSCAPE_FLAT,
             'title' => 'Flat',
             'height' => 0,
         ],
         [
-            'id' => 3,
+            'model' => PohModel::LANDSCAPE_HILLS,
             'title' => 'Hills',
             'height' => 1,
         ],
         [
-            'id' => 4,
+            'model' => PohModel::LANDSCAPE_STEEP_HILLS,
+            'title' => 'Hills',
+            'height' => 1,
+        ],
+        [
+            'model' => PohModel::LANDSCAPE_MOUNTAINS,
             'title' => 'Mountains',
             'height' => 3,
         ],
         [
-            'id' => 5,
+            'model' => PohModel::LANDSCAPE_PEAK,
             'title' => 'Peak',
             'height' => 4,
         ],
