@@ -12,6 +12,7 @@ use database\seeds\data\TechRequirements;
 use database\seeds\data\Terrains;
 use database\seeds\data\UnitTypes;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -40,14 +41,25 @@ class DatabaseSeeder extends Seeder
     /**
      * @param string|CommonModel $model
      * @param array $data
+     * @param string $idColumn
      */
-    private function seedDataset(string $model, array $data)
+    private function seedDataset(PohSeeder $seeder)
     {
-        echo "Seeding $model";
+        echo "Seeding $seeder->model";
+
+        if (!$seeder->idColumn) {
+            $table = $model::getTable();
+            $sql = "TRUNCATE TABLE $table";
+            DB::statement($sql);
+        }
 
         foreach ($data as $params) {
             echo '.';
-            $model::createOrUpdate($params);
+            if ($idColumn) {
+                $model::updateOrCreate([$idColumn => $params[$idColumn]], $params);
+            } else {
+                $model::create($params);
+            }
         }
 
         echo PHP_EOL;
