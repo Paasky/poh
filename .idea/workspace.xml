@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5c05f4e-4d16-43b8-9119-b56a776aa3e9" name="Default Changelist" comment="Create model constants">
-      <change afterPath="$PROJECT_DIR$/app/Models/PohModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Pekko.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Pekko.xml" afterDir="false" />
+    <list default="true" id="c5c05f4e-4d16-43b8-9119-b56a776aa3e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Managers/HexManager.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Types/Ability.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Types/Ability.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/Abilities.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Abilities.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/Biomes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Biomes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/CityTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/CityTypes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/Features.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Features.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/Landscapes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Landscapes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/Resources.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Resources.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/TechRequirements.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/TechRequirements.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/Technologies.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Technologies.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/Terrains.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/Terrains.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/data/UnitTypes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/data/UnitTypes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/CommonModel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/PohModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/PohModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,6 +154,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/database/seeds/data" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -230,7 +222,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1566128949142</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Create model constants">
+      <created>1566331581309</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1566331581309</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -2,8 +2,14 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * Class PohModel
+ * @package App\Models
+ * @mixin Builder
+ */
 abstract class PohModel extends Model
 {
     const ABILITY_VS_HEAVY_INF = 'vsHeavyInf';

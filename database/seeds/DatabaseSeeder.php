@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\CommonModel;
+use App\Models\PohModel;
 use database\seeds\data\Abilities;
 use database\seeds\data\Biomes;
 use database\seeds\data\CityTypes;
@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
     }
 
     /**
-     * @param string|CommonModel $model
+     * @param string|PohModel $model
      * @param array $data
      * @param string $idColumn
      */
