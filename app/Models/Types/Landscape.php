@@ -2,11 +2,11 @@
 
 namespace App\Models\Types;
 
+use App\Models\PohModel;
 use App\Traits\HasYields;
 use App\Traits\ShownOnMap;
-use Illuminate\Database\Eloquent\Model;
 
-class Landscape extends Model
+class Landscape extends PohModel
 {
     use HasYields, ShownOnMap;
 

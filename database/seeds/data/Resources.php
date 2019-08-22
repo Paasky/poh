@@ -5,10 +5,10 @@ namespace database\seeds\data;
 use App\Models\PohModel;
 use App\Models\Types\Resource;
 
-class Resources
+class Resources extends PohSeeder
 {
-    const MODEL = Resource::class;
-    const DATA = [
+    public $model = Resource::class;
+    public $data = [
         [
             'model' => PohModel::RESOURCE_COPPER,
             'title' => 'Copper',

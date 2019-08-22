@@ -4,10 +4,10 @@ namespace database\seeds\data;
 use App\Models\PohModel;
 use App\Models\Types\CityType;
 
-class CityTypes
+class CityTypes extends PohSeeder
 {
-    const MODEL = CityType::class;
-    const DATA = [
+    public $model = CityType::class;
+    public $data = [
         [
             'model' => PohModel::CITY_VILLAGE,
             'title' => 'Village',

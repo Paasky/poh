@@ -2,9 +2,9 @@
 
 namespace App\Models\Types;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Models\PohModel;
 
-class Technology extends Model
+class Technology extends PohModel
 {
     const ERA_PREHISTORIC = 'prehistoric';
     const ERA_BRONZE = 'bronze';

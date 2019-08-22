@@ -5,10 +5,10 @@ namespace database\seeds\data;
 use App\Models\PohModel;
 use App\Models\Types\UnitType;
 
-class UnitTypes
+class UnitTypes extends PohSeeder
 {
-    const MODEL = UnitType::class;
-    const DATA = [
+    public $model = UnitType::class;
+    public $data = [
         [
             'model' => PohModel::UNIT_WORKER,
             'title' => 'Worker',

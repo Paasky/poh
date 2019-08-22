@@ -3,12 +3,23 @@
 namespace database\seeds\data;
 
 use App\Models\PohModel;
+use App\Models\Types\Biome;
 use App\Models\Types\Terrain;
 
-class Terrains
+class Terrains extends PohSeeder
 {
-    const MODEL = Terrain::class;
-    const DATA = [
+    public $model = Terrain::class;
+
+    public function preProcessData(): void
+    {
+        foreach ($this->data as $i => $row) {
+            foreach ($row['biomes'] as $biomeIndex => $biomeModel) {
+                $this->data[$i]['biomes'][$biomeIndex] = Biome::where('model', $biomeModel)->firstOrFail()->id;
+            }
+        }
+    }
+
+    public $data = [
         [
             'model' => PohModel::TERRAIN_GRASS,
             'title' => PohModel::TERRAIN_TYPE_GRASS,

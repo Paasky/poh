@@ -2,12 +2,22 @@
 
 namespace database\seeds\data;
 use App\Models\PohModel;
+use App\Models\Types\Technology;
 use App\Models\Types\TechnologyRequirement;
 
-class TechRequirements
+class TechRequirements extends PohSeeder
 {
-    const MODEL = TechnologyRequirement::class;
-    const DATA = [
+    public $model = TechnologyRequirement::class;
+
+    public function preProcessData(): void
+    {
+        foreach ($this->data as $i => $row) {
+            $this->data[$i]['required'] = Technology::where('model', $row['required'])->firstOrFail()->id;
+            $this->data[$i]['for'] = Technology::where('model', $row['for'])->firstOrFail()->id;
+        }
+    }
+
+    public $data = [
         [
             'required' => PohModel::TECH_AGRICULTURE,
             'for' => PohModel::TECH_SAILING,

@@ -6,10 +6,20 @@ use App\Models\PohModel;
 use App\Models\Types\Ability;
 use App\Models\Types\UnitType;
 
-class Abilities
+class Abilities extends PohSeeder
 {
-    const MODEL = Ability::class;
-    const DATA = [
+    public $model = Ability::class;
+
+    public function preProcessData(): void
+    {
+        foreach ($this->data as $i => $row) {
+            /** @var PohModel $class */
+            $class = $row['model_type'];
+            $this->data[$i]['model_id'] = $class::where('model', $row['model_id'])->firstOrFail()->id;
+        }
+    }
+
+    public $data = [
         [
             'model_type' => UnitType::class,
             'model_id' => 12,

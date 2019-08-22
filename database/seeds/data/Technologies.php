@@ -5,10 +5,10 @@ namespace database\seeds\data;
 use App\Models\PohModel;
 use App\Models\Types\Technology;
 
-class Technologies
+class Technologies extends PohSeeder
 {
-    const MODEL = Technology::class;
-    const DATA = [
+    public $model = Technology::class;
+    public $data = [
         [
             'model' => PohModel::TECH_AGRICULTURE,
             'title' => 'Agriculture',

@@ -4,10 +4,10 @@ namespace database\seeds\data;
 use App\Models\PohModel;
 use App\Models\Types\Landscape;
 
-class Landscapes
+class Landscapes extends PohSeeder
 {
-    const MODEL = Landscape::class;
-    const DATA = [
+    public $model = Landscape::class;
+    public $data = [
         [
             'model' => PohModel::LANDSCAPE_WATER,
             'title' => 'Water',

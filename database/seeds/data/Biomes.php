@@ -4,10 +4,10 @@ namespace database\seeds\data;
 use App\Models\PohModel;
 use App\Models\Types\Biome;
 
-class Biomes
+class Biomes extends PohSeeder
 {
-    const MODEL = Biome::class;
-    const DATA = [
+    public $model = Biome::class;
+    public $data = [
         [
             'model' => PohModel::BIOME_ARCTIC,
             'title' => 'Arctic',
