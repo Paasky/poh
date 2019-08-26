@@ -18,13 +18,40 @@ use Illuminate\Support\Collection;
  */
 class YieldsChanges
 {
+    const MODE_LOCAL_COUNT = 'local_count';
+    const MODE_LOCAL_PERCENT = 'local_percent';
+    const MODE_GLOBAL_COUNT = 'global_count';
+    const MODE_GLOBAL_PERCENT = 'global_percent';
+
+    const TYPE_FOOD = self::TYPE_FOOD;
+    const TYPE_GOLD = self::TYPE_GOLD;
+    const TYPE_PRODUCTION = self::TYPE_PRODUCTION;
+    const TYPE_CULTURE = self::TYPE_CULTURE;
+    const TYPE_RESEARCH = self::TYPE_RESEARCH;
+    const TYPE_RELIGION = self::TYPE_RELIGION;
+    const TYPE_HEALTH = self::TYPE_HEALTH;
+    const TYPE_ORDER = self::TYPE_ORDER;
+    const TYPE_CORRUPTION = self::TYPE_CORRUPTION;
+    const TYPE_ESPIONAGE = self::TYPE_ESPIONAGE;
+
+    const TRADE_DOMAIN_ALL = 'all';
+    const TRADE_DOMAIN_LAND = 'land';
+    const TRADE_DOMAIN_WATER = 'water';
+    const TRADE_DOMAIN_AIR = 'air';
+
+    const CATEGORY_BIOMES = 'biomes';
+    const CATEGORY_TERRAINS = 'terrains';
+    const CATEGORY_LANDSCAPES = 'landscapes';
+    const CATEGORY_FEATURES = 'features';
+    const CATEGORY_RESOURCES = 'resources';
+
     private $values = [];
     private $trade = [];
     private $tradeRoutes = [
-        'all' => 0,
-        'land' => 0,
-        'water' => 0,
-        'air' => 0,
+        self::TRADE_DOMAIN_ALL => 0,
+        self::TRADE_DOMAIN_LAND => 0,
+        self::TRADE_DOMAIN_WATER => 0,
+        self::TRADE_DOMAIN_AIR => 0,
     ];
 
     private $localMode = false;
@@ -40,9 +67,13 @@ class YieldsChanges
     private $forWaterTrade = false;
     private $forAirTrade = false;
 
+    /**
+     * YieldsChanges constructor.
+     * @param Collection|ActualYields[] $yields
+     */
     public function __construct(Collection $yields)
     {
-        /** @var Yields $output */
+        /** @var ActualYields $output */
         foreach ($yields as $output) {
             $this->localMode = $output->is_local;
             $this->percentMode = $output->is_percent;
@@ -104,52 +135,52 @@ class YieldsChanges
 
     private function addFood($value)
     {
-        $this->addOutput($value, 'food');
+        $this->addOutput($value, self::TYPE_FOOD);
     }
 
     private function addGold($value)
     {
-        $this->addOutput($value, 'gold');
+        $this->addOutput($value, self::TYPE_GOLD);
     }
 
     private function addProduction($value)
     {
-        $this->addOutput($value, 'production');
+        $this->addOutput($value, self::TYPE_PRODUCTION);
     }
 
     private function addCulture($value)
     {
-        $this->addOutput($value, 'culture');
+        $this->addOutput($value, self::TYPE_CULTURE);
     }
 
     private function addResearch($value)
     {
-        $this->addOutput($value, 'research');
+        $this->addOutput($value, self::TYPE_RESEARCH);
     }
 
     private function addReligion($value)
     {
-        $this->addOutput($value, 'religion');
+        $this->addOutput($value, self::TYPE_RELIGION);
     }
 
     private function addHealth($value)
     {
-        $this->addOutput($value, 'health');
+        $this->addOutput($value, self::TYPE_HEALTH);
     }
 
     private function addOrder($value)
     {
-        $this->addOutput($value, 'order');
+        $this->addOutput($value, self::TYPE_ORDER);
     }
 
     private function addCorruption($value)
     {
-        $this->addOutput($value, 'corruption');
+        $this->addOutput($value, self::TYPE_CORRUPTION);
     }
 
     private function addEspionage($value)
     {
-        $this->addOutput($value, 'espionage');
+        $this->addOutput($value, self::TYPE_ESPIONAGE);
     }
 
     private function addOutput($value, string $yieldType)
@@ -190,44 +221,44 @@ class YieldsChanges
     private function addTradeRoutes($value)
     {
         if ($this->forLandTrade) {
-            $this->tradeRoutes['land'] += $value;
+            $this->tradeRoutes[self::TRADE_DOMAIN_LAND] += $value;
         }
         if ($this->forWaterTrade) {
-            $this->tradeRoutes['water'] += $value;
+            $this->tradeRoutes[self::TRADE_DOMAIN_WATER] += $value;
         }
         if ($this->forAirTrade) {
-            $this->tradeRoutes['air'] += $value;
+            $this->tradeRoutes[self::TRADE_DOMAIN_AIR] += $value;
         }
     }
 
     private function addTradeGold($value)
     {
-        $this->addTrade($value, 'gold');
+        $this->addTrade($value, self::TYPE_GOLD);
     }
 
     private function addTradeResearch($value)
     {
-        $this->addTrade($value, 'research');
+        $this->addTrade($value, self::TYPE_RESEARCH);
     }
 
     private function addTradeEspionage($value)
     {
-        $this->addTrade($value, 'espionage');
+        $this->addTrade($value, self::TYPE_ESPIONAGE);
     }
 
     private function addTrade($value, string $yieldType)
     {
         if ($this->forLandTrade && $this->forWaterTrade && $this->forAirTrade) {
-            $this->addTradeDomain($value, $yieldType, 'all');
+            $this->addTradeDomain($value, $yieldType, self::TRADE_DOMAIN_ALL);
         } else {
             if ($this->forLandTrade) {
-                $this->addTradeDomain($value, $yieldType, 'land');
+                $this->addTradeDomain($value, $yieldType, self::TRADE_DOMAIN_LAND);
             }
             if ($this->forWaterTrade) {
-                $this->addTradeDomain($value, $yieldType, 'water');
+                $this->addTradeDomain($value, $yieldType, self::TRADE_DOMAIN_WATER);
             }
             if ($this->forAirTrade) {
-                $this->addTradeDomain($value, $yieldType, 'air');
+                $this->addTradeDomain($value, $yieldType, self::TRADE_DOMAIN_AIR);
             }
         }
     }
@@ -240,7 +271,7 @@ class YieldsChanges
                $this->trade[$yieldType][$domain][$mode] = round($now + $value, 2);
     }
 
-    public function getValue($yieldType, $mode, $category = null, $categoryId = null)
+    public function getValue(string $yieldType, string $mode, string $category = null, string $categoryId = null)
     {
         if (!$category) {
             return $this->values[$yieldType][$mode];

@@ -5,7 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Hex extends Model 
+/**
+ * Class Hex
+ * @package App\Models
+ *
+ */
+class Hex extends Model
 {
 
     protected $table = 'hexes';

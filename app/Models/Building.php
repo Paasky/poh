@@ -1,11 +1,18 @@
 <?php
 
-namespace App/Models;
+namespace App\Models;
 
+use App\Models\Types\BuildingType;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Building extends Model 
+/**
+ * Class Building
+ * @package App\Models
+ *
+ * @property BuildingType type
+ */
+class Building extends Model
 {
 
     protected $table = 'buildings';
