@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  * Class PohModel
  * @package App\Models
  * @mixin Builder
+ * @property int $id
  */
 abstract class PohModel extends Model
 {

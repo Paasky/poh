@@ -2,11 +2,11 @@
 
 namespace App\Models\Types;
 
+use App\Models\PohModel;
 use App\Traits\HasYields;
 use App\Traits\UsesResources;
-use Illuminate\Database\Eloquent\Model;
 
-class UnitType extends Model
+class UnitType extends PohModel
 {
     use HasYields, UsesResources;
 

@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use App\Managers\HexManager;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @package App\Models
  *
  */
-class Hex extends Model
+class Hex extends PohModel
 {
 
     protected $table = 'hexes';
@@ -20,6 +20,56 @@ class Hex extends Model
 
     protected $dates = ['deleted_at'];
     protected $fillable = array('coords', 'map_id', 'biome_id', 'terrain_id', 'landscape_id', 'feature_id', 'resource_id', 'resource_amount', 'player_id');
+
+    public function left(): ?Hex
+    {
+        return HexManager::inCoords($this->x - 1, $this->y, $this->map);
+    }
+
+    public function right(): ?Hex
+    {
+        return HexManager::inCoords($this->x + 1, $this->y, $this->map);
+    }
+
+    public function topLeft(): ?Hex
+    {
+        if ($this->map->type == Map::TYPE_FLAT) {
+            $xMod = $this->x % 2 ? -1 : 0;
+        } else {
+            $xMod = -1;
+        }
+        return HexManager::inCoords($this->x + $xMod, $this->y + 1, $this->map);
+    }
+
+    public function topRight(): ?Hex
+    {
+        if ($this->map->type == Map::TYPE_FLAT) {
+            $xMod = $this->x % 2 ? 0 : 1;
+        } else {
+            $xMod = 0;
+        }
+        return HexManager::inCoords($this->x + $xMod, $this->y + 1, $this->map);
+    }
+
+    public function bottomLeft(): ?Hex
+    {
+        if ($this->map->type == Map::TYPE_FLAT) {
+            $xMod = $this->x % 2 ? -1 : 0;
+        } else {
+            $xMod = $this->x % 2 ? 0 : -1;
+        }
+        return HexManager::inCoords($this->x + $xMod, $this->y - 1, $this->map);
+    }
+
+    public function bottomRight(): ?Hex
+    {
+        if ($this->map->type == Map::TYPE_FLAT) {
+            $xMod = $this->x % 2 ? 0 : 1;
+        } else {
+            $xMod = $this->x % 2 ? 1 : 0;
+        }
+        return HexManager::inCoords($this->x + $xMod, $this->y - 1, $this->map);
+    }
 
     public function map()
     {
@@ -80,5 +130,4 @@ class Hex extends Model
     {
         return $this->hasOne('District');
     }
-
 }
