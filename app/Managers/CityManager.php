@@ -23,10 +23,11 @@ class CityManager
             $yieldTypes = array_merge($yieldTypes, $building->type->yields);
         }
 
-        $yieldsChanges = new YieldsChanges($yieldTypes);
+        // dependant units
+        foreach ($city->depandentUnits as $unit) {
+            $yieldTypes = array_merge($yieldTypes, UnitManager::getSupplyYields($unit));
+        }
 
-        $yields = new ActualYields();
-        $yields->withChanges($yieldsChanges);
-        return $yields;
+        return new ActualYields(new YieldsChanges($yieldTypes));
     }
 }

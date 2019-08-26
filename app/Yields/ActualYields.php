@@ -1,6 +1,5 @@
 <?php
 
-
 namespace App\Yields;
 
 class ActualYields
@@ -8,59 +7,115 @@ class ActualYields
     /** @var YieldsChanges */
     private $changes;
 
-    public function withChanges(YieldsChanges $changes): self
+    public function __construct(YieldsChanges $changes)
     {
         $this->changes = $changes;
-        return $this;
     }
 
-    private function getFood(): float
+    public function getFood(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_FOOD, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_FOOD, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_FOOD, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_FOOD, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_FOOD, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getGold(): float
+    public function getGold(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_GOLD, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_GOLD, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_GOLD, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_GOLD, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_GOLD, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getProduction(): float
+    public function getProduction(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_PRODUCTION, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_PRODUCTION, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_PRODUCTION, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_PRODUCTION, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_PRODUCTION, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getCulture(): float
+    public function getCulture(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_CULTURE, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_CULTURE, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_CULTURE, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_CULTURE, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_CULTURE, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getResearch(): float
+    public function getResearch(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_RESEARCH, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_RESEARCH, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_RESEARCH, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_RESEARCH, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_RESEARCH, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getReligion(): float
+    public function getReligion(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_RELIGION, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_RELIGION, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_RELIGION, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_RELIGION, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_RELIGION, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getHealth(): float
+    public function getHealth(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_HEALTH, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_HEALTH, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_HEALTH, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_HEALTH, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_HEALTH, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getOrder(): float
+    public function getOrder(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_ORDER, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_ORDER, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_ORDER, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_ORDER, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_ORDER, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getCorruption(): float
+    public function getCorruption(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_CORRUPTION, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_CORRUPTION, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_CORRUPTION, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_CORRUPTION, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_CORRUPTION, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
     }
 
-    private function getEspionage(): float
+    public function getEspionage(): float
     {
-        $this->changes->getValue(YieldsChanges::TYPE_ESPIONAGE, YieldsChanges::MODE_LOCAL_COUNT);
+        return $this->getValue(
+            $this->changes->getValue(YieldsChanges::TYPE_ESPIONAGE, YieldsChanges::MODE_LOCAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_ESPIONAGE, YieldsChanges::MODE_GLOBAL_COUNT),
+            $this->changes->getValue(YieldsChanges::TYPE_ESPIONAGE, YieldsChanges::MODE_LOCAL_PERCENT),
+            $this->changes->getValue(YieldsChanges::TYPE_ESPIONAGE, YieldsChanges::MODE_GLOBAL_PERCENT)
+        );
+    }
+
+    private function getValue(float $localCount, float $globalCount, float $localPercent, float $globalPercent): float
+    {
+        $count = $localCount + $globalCount;
+        $percent =  (100 + $localPercent + $globalPercent) / 100;
+        return round($count * $percent, 2);
     }
 }
