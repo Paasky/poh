@@ -14,6 +14,7 @@ use Illuminate\Support\Collection;
  * @property Collection|WorkedHex[] workedHexes
  * @property Collection|Building[] buildings
  * @property Collection|Citizen[] citizens
+ * @property Collection|Unit[] dependentUnits
  */
 class City extends Model
 {
@@ -54,5 +55,10 @@ class City extends Model
     public function workedHexes(): HasMany
     {
         return $this->hasMany(WorkedHex::class);
+    }
+
+    public function dependentUnits(): HasMany
+    {
+        return $this->hasMany(Unit::class);
     }
 }

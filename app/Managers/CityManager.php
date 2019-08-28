@@ -4,16 +4,21 @@ namespace App\Managers;
 
 use App\Models\City;
 use App\Models\Hex;
+use App\Models\Types\Yields;
 use App\Yields\ActualYields;
 use App\Yields\YieldsChanges;
 
 class CityManager
 {
-    public static function getYields(City $city): ActualYields
+    /**
+     * @param City $city
+     * @return Yields[]
+     */
+    public static function getYields(City $city): array
     {
         $yieldTypes = [];
 
-        // citizens
+        // citizens (& hexes they work in)
         foreach($city->citizens as $citizen) {
             $yieldTypes = array_merge($yieldTypes, CitizenManager::getYields($citizen));
         }
@@ -23,11 +28,11 @@ class CityManager
             $yieldTypes = array_merge($yieldTypes, $building->type->yields);
         }
 
-        // dependant units
-        foreach ($city->depandentUnits as $unit) {
+        // dependent units
+        foreach ($city->dependentUnits as $unit) {
             $yieldTypes = array_merge($yieldTypes, UnitManager::getSupplyYields($unit));
         }
 
-        return new ActualYields(new YieldsChanges($yieldTypes));
+        return $yieldTypes;
     }
 }

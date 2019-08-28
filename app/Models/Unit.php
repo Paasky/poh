@@ -4,6 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
+/**
+ * Class Unit
+ * @package App\Models
+ *
+ * @property-read Hex $hex
+ */
 class Unit extends PohModel
 {
 
