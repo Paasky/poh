@@ -26,6 +26,7 @@ class Move
 
     public function apply(): void
     {
+        UnitManager::clearFortify($this->unit, false);
         $this->unit->hex_id = $this->toHex->id;
         $this->unit->moves = round($this->unit->moves - $this->cost, 2);
         $this->unit->save();

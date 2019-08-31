@@ -35,4 +35,16 @@ class CityManager
 
         return $yieldTypes;
     }
+
+    public static function newTurn(City $city): void
+    {
+        // defense
+
+        // growth
+
+        // politics
+
+        // construction
+
+    }
 }

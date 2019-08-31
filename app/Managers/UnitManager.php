@@ -6,6 +6,8 @@ use App\Exceptions\GameIdMismatchException;
 use App\Exceptions\ImpossibleException;
 use App\Exceptions\InvalidMoveException;
 use App\Exceptions\MissingRequirementException;
+use App\Messages\DeadUnitMessage;
+use App\Messages\Messages;
 use App\Models\Building;
 use App\Models\Hex;
 use App\Models\Improvement;
@@ -22,8 +24,6 @@ use Illuminate\Support\Collection;
 
 class UnitManager
 {
-    const MOVE_COST = 'cost';
-
     public static function create(UnitType $type, Player $player, Hex $hex, string $name = null): Unit
     {
         GameIntegrityManager::verifyPlayerAndHex($player, $hex);
@@ -34,6 +34,12 @@ class UnitManager
             'hex_id' => $hex->id,
             'name' => $name
         ]);
+    }
+
+    public static function clearFortify(Unit $unit, bool $saveChanges = true): void
+    {
+        $unit->is_fortified = false;
+        $unit->fortified_for = 0;
     }
 
     public static function move(Unit $unit, Hex $to): void
@@ -153,12 +159,6 @@ class UnitManager
         return false;
     }
 
-    /**
-     * @param Unit $unit
-     * @param Hex $hex
-     * @param Unit|null $target
-     * @throws MissingRequirementException
-     */
     public static function attack(Unit $unit, Hex $hex, Unit $target = null): void
     {
         GameIntegrityManager::verifyUnitAndHex($unit, $hex);
@@ -182,18 +182,18 @@ class UnitManager
     }
 
     /**
-     * @param Unit $unit
-     * @param Hex $hex
+     * @param Unit $attacker
+     * @param Hex $targetHex
      * @param string[]|PohModel[] $allowedClasses
      * @param null|PohModel $preferredTarget
      * @return PohModel
      * @throws ImpossibleException
      * @throws MissingRequirementException
      */
-    private static function getTarget(Unit $unit, Hex $hex, array $allowedClasses, $preferredTarget = null)
+    private static function getTarget(Unit $attacker, Hex $targetHex, array $allowedClasses, $preferredTarget = null)
     {
         if ($preferredTarget) {
-            static::hasAbility($unit, PohModel::ABILITY_CAN_TARGET, true);
+            static::hasAbility($attacker, PohModel::ABILITY_CAN_TARGET, true);
 
             $class = get_class($preferredTarget);
             $id = $target->id ?? 'non-model';
@@ -201,14 +201,14 @@ class UnitManager
             if (!in_array($class, $allowedClasses)) {
                 throw new ImpossibleException(
                     "Invalid target",
-                    "Unit [{$unit->id}] tried to target {$class} [{$id}]"
+                    "Unit [{$attacker->id}] tried to target {$class} [{$id}]"
                 );
             }
 
-            if ($preferredTarget->hex_id != $hex->id) {
+            if ($preferredTarget->hex_id != $targetHex->id) {
                 throw new ImpossibleException(
                     "Invalid target",
-                    "Unit [{$unit->id}] in Hex [{$unit->hex_id}] tried to target {$class} [{$id}] in Hex [{$target->hex_id}]"
+                    "Unit [{$attacker->id}] in Hex [{$attacker->hex_id}] tried to target {$class} [{$id}] in Hex [{$target->hex_id}]"
                 );
             }
 
@@ -216,16 +216,16 @@ class UnitManager
         }
 
         $possibleTargets = [];
-        foreach ($hex->units as $unit) {
-            $possibleTargets[] = $unit;
+        foreach ($targetHex->units as $attacker) {
+            $possibleTargets[] = $attacker;
         }
-        if ($hex->city) {
-            foreach ($hex->city->buildings as $building) {
+        if ($targetHex->city) {
+            foreach ($targetHex->city->buildings as $building) {
                 $possibleTargets[] = $building;
             }
         }
-        if ($hex->improvement) {
-            $possibleTargets[] = $hex->improvement;
+        if ($targetHex->improvement) {
+            $possibleTargets[] = $targetHex->improvement;
         }
 
         $targetIndex = array_rand($possibleTargets);
@@ -239,7 +239,48 @@ class UnitManager
 
     public static function newTurn(Unit $unit): void
     {
+        if ($unit->health != 100) {
+            $unit->health += static::getHealingPercent($unit);
+            if ($unit->health > 100) {
+                $unit->health = 100;
+            } else {
+                static::deleteIfDead($unit);
+            }
+        }
 
+        $unit->moves = $unit->type->moves;
+        $unit->waiting_for_move = !$unit->is_fortified;
+        $unit->save();
+    }
+
+    public static function getHealingPercent(Unit $unit): int
+    {
+        $defaultHealPercentPerTurn = 10;
+        $yields = HexManager::getYields($unit->hex);
+        return $defaultHealPercentPerTurn + ($yields->getHealth() * 10);
+    }
+
+    /**
+     * @param Unit ...$units
+     */
+    public static function deleteIfDead(...$units): void
+    {
+        foreach ($units as $unit) {
+            static::verifyIsUnit($unit);
+            if ($unit->health <= 0) {
+                $unit->delete();
+                Messages::create(new DeadUnitMessage($unit));
+            }
+        }
+    }
+
+    public static function verifyIsUnit($unit): void
+    {
+        if (!$unit instanceof Unit) {
+            $class = get_class($unit);
+            $unitClass = Unit::class;
+            throw new \BadFunctionCallException("Gave class $class, only $unitClass accepted");
+        }
     }
 
     public static function promote(Unit $unit): void
@@ -247,29 +288,32 @@ class UnitManager
 
     }
 
-    public static function fortify(Unit $unit): void
+    public static function patrolUntilHealed(Unit $unit): void
     {
-
+        $unit->wake_when_healed = true;
+        static::patrol($unit);
     }
 
     public static function patrol(Unit $unit): void
     {
-
+        $unit->wake_when_danger = true;
+        static::fortify($unit);
     }
 
-    public static function wait(Unit $unit): void
+    public static function fortify(Unit $unit): void
     {
-
+        $unit->is_fortified = true;
+        static::skipTurn($unit);
     }
 
-    public static function fortifyUntilHealed(Unit $unit): void
+    public static function skipTurn(Unit $unit): void
     {
-
+        $unit->waiting_for_move = false;
     }
 
     public static function disband(Unit $unit): void
     {
-
+        $unit->delete();
     }
 
     /**

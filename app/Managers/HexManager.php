@@ -8,6 +8,7 @@ use App\Models\Map;
 
 use App\Yields\ActualYields;
 use App\Yields\YieldsChanges;
+use Illuminate\Support\Collection;
 
 class HexManager
 {
@@ -34,6 +35,21 @@ class HexManager
         }
 
         return $map->hex($x, $y);
+    }
+
+    /**
+     * @param Hex $hex
+     * @param int $range
+     * @return Collection|Hex[]
+     */
+    public static function inRange(Hex $hex, int $range): Collection
+    {
+
+    }
+
+    public static function getDistance(Hex $from, Hex $to): int
+    {
+
     }
 
     private static function trueX(int $x, int $y, Map $map): ?int
