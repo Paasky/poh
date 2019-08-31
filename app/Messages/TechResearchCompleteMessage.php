@@ -4,7 +4,7 @@ namespace App\Messages;
 
 use App\KnownTechnology;
 
-class DiscoveredTechMessage extends Message
+class TechResearchCompleteMessage extends Message
 {
     /** @var KnownTechnology  */
     private $tech;

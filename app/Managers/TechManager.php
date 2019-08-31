@@ -3,7 +3,7 @@
 namespace App\Managers;
 
 use App\KnownTechnology;
-use App\Messages\DiscoveredTechMessage;
+use App\Messages\TechResearchCompleteMessage;
 use App\Messages\KnowAboutTechMessage;
 use App\Messages\Messages;
 use App\Models\Player;
@@ -24,11 +24,7 @@ class TechManager
         if ($tech->points >= $tech->type->cost) {
             $overflow = $tech->points - $tech->type->cost;
             $researchPoints = round($researchPoints + $overflow, 2);
-
-            $tech->under_research = false;
-            $tech->is_known = true;
-            $tech->points = $tech->type->cost;
-            Messages::create(new DiscoveredTechMessage($tech));
+            static::researchComplete($tech);
         }
 
         $tech->save();
@@ -39,12 +35,17 @@ class TechManager
         if (!$knownTech = $player->knownTechnologies->firstWhere('type_id', $techType->id)) {
             $knownTech = static::generate($techType, $player);
         }
-        $knownTech->under_research = false;
-        $knownTech->is_known = true;
-        $knownTech->points = $techType->cost;
-        $knownTech->save();
-        Messages::create(new DiscoveredTechMessage($knownTech));
+        static::researchComplete($knownTech);
         return $knownTech;
+    }
+
+    public static function researchComplete(KnownTechnology $tech): void
+    {
+        $tech->under_research = false;
+        $tech->is_known = true;
+        $tech->points = $tech->type->cost;
+        $tech->save();
+        Messages::create(new TechResearchCompleteMessage($tech));
     }
 
     public static function generate(Technology $techType, Player $player): KnownTechnology
