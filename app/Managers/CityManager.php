@@ -36,7 +36,7 @@ class CityManager
         return $yieldTypes;
     }
 
-    public static function newTurn(City $city): void
+    public static function nextTurn(City $city): void
     {
         // defense
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace App/Models;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class KnownTechnology extends Model 
+class KnownTechnology extends Model
 {
 
     protected $table = 'known_technologies';

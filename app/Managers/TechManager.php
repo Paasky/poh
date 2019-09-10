@@ -2,7 +2,7 @@
 
 namespace App\Managers;
 
-use App\KnownTechnology;
+use App\Models\KnownTechnology;
 use App\Messages\TechResearchCompleteMessage;
 use App\Messages\KnowAboutTechMessage;
 use App\Messages\Messages;
@@ -17,13 +17,11 @@ class TechManager
             return;
         }
 
-        $pointsForTech = round($researchPoints * $tech->research_percent / 100, 2);
-        $tech->points = round($tech->points + $pointsForTech, 2);
-        $researchPoints = round($researchPoints - $pointsForTech, 2);
+        $tech->points = round($tech->points + $researchPoints, 2);
+        $researchPoints = 0;
 
         if ($tech->points >= $tech->type->cost) {
-            $overflow = $tech->points - $tech->type->cost;
-            $researchPoints = round($researchPoints + $overflow, 2);
+            $researchPoints = round($tech->points - $tech->type->cost, 2);
             static::researchComplete($tech);
         }
 
@@ -32,8 +30,9 @@ class TechManager
 
     public static function give(Technology $techType, Player $player): KnownTechnology
     {
+
         if (!$knownTech = $player->knownTechnologies->firstWhere('type_id', $techType->id)) {
-            $knownTech = static::generate($techType, $player);
+            $knownTech = static::generate($techType, $player, false);
         }
         static::researchComplete($knownTech);
         return $knownTech;
@@ -48,7 +47,7 @@ class TechManager
         Messages::create(new TechResearchCompleteMessage($tech));
     }
 
-    public static function generate(Technology $techType, Player $player): KnownTechnology
+    public static function generate(Technology $techType, Player $player, bool $notify = true): KnownTechnology
     {
         $tech = KnownTechnology::create([
             'type_id' => $techType->id,
@@ -56,7 +55,9 @@ class TechManager
             'player_id' => $player->id,
         ]);
 
-        Messages::create(new KnowAboutTechMessage($tech));
+        if ($notify) {
+            Messages::create(new KnowAboutTechMessage($tech));
+        }
         return $tech;
     }
 }

@@ -1,8 +1,8 @@
 <?php
 
-use App\Models\PohModel;
 use database\seeds\data\Abilities;
 use database\seeds\data\Biomes;
+use database\seeds\data\Buildings;
 use database\seeds\data\CityTypes;
 use database\seeds\data\Features;
 use database\seeds\data\Landscapes;
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         $this->seedDataset(new Technologies());
         $this->seedDataset(new TechRequirements());
         $this->seedDataset(new Resources());
-        // todo building types
+        $this->seedDataset(new Buildings());
         // todo district types
         // todo event types
         // todo improvement types

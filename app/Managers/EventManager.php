@@ -6,7 +6,7 @@ use App\Models\Event;
 
 class EventManager
 {
-    public static function newTurn(Event $event): void
+    public static function nextTurn(Event $event): void
     {
 
     }

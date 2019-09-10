@@ -237,7 +237,7 @@ class UnitManager
 
     }
 
-    public static function newTurn(Unit $unit): void
+    public static function nextTurn(Unit $unit): void
     {
         if ($unit->health != 100) {
             $unit->health += static::getHealingPercent($unit);
